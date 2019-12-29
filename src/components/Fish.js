@@ -2,7 +2,14 @@ import React from "react";
 
 class Fish extends React.Component {
   render() {
-    return <div className="single-fish">🐟🐠🐡</div>;
+    return (
+      <li className="menu-fish">
+        name: {this.props.detail.name}
+        <img src={this.props.detail.image} />
+        {this.props.detail.desc}<br/>
+        price: {this.props.detail.price}
+      </li>
+    );
   }
 }
 
