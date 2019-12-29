@@ -3,6 +3,7 @@ import Header from "./Header";
 import Inventory from "./Inventory";
 import Order from "./Order";
 import sampleFishes from "../sample-fishes";
+import Fish from "./Fish";
 
 class App extends React.Component {
   state = {
@@ -30,6 +31,15 @@ class App extends React.Component {
       <div className="catch-of-the-day">
         <div className="menu">
           <Header tagline="Fresh SeaFood Market" />
+          <ul className="fishes">
+            <Fish />
+            <Fish />
+            <Fish />
+            <Fish />
+            <Fish />
+            <Fish />
+            <Fish />
+          </ul>
         </div>
         <Order />
         <Inventory
