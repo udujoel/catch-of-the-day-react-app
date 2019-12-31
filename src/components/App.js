@@ -8,7 +8,8 @@ import Fish from "./Fish";
 class App extends React.Component {
   state = {
     fishes: {},
-    Inventory: {}
+    order:{},
+    inventory: {}
   };
 
   addFish = fish => {
@@ -25,6 +26,13 @@ class App extends React.Component {
   loadSampleFishes = () => {
     this.setState({ fishes: sampleFishes });
   };
+  addToOrder = () => {
+    // make a copy of state
+    const order = { ...this.state.order };
+    //add to or update order
+    //call setState to commit changes
+
+  }
 
   render() {
     return (
