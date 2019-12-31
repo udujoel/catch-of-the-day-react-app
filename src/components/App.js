@@ -12,7 +12,7 @@ class App extends React.Component {
     inventory: {}
   };
 
-  addFish(fish) {
+  addFish = fish => {
     // make a copy of the state
     const fishes = { ...this.state.fishes };
     // add the new fish to our copy with unique id
@@ -21,7 +21,7 @@ class App extends React.Component {
     this.setState({
       fishes: fishes
     });
-  }
+  };
 
   loadSampleFishes = () => {
     this.setState({ fishes: sampleFishes });
@@ -30,6 +30,7 @@ class App extends React.Component {
     // make a copy of state
     const order = { ...this.state.order };
     //add to or update order
+    
     //call setState to commit changes
   };
 
