@@ -30,7 +30,7 @@ class App extends React.Component {
     // make a copy of state
     const order = { ...this.state.order };
     //add to or update order
-    order[key] = order[key]++ || 1;
+    order[key] = order[key]+1 || 1;
 
     //call setState to commit changes
     this.setState({ order: order });
@@ -43,7 +43,7 @@ class App extends React.Component {
           <Header tagline="Fresh SeaFood Market" />
           <ul className="fishes">
             {Object.keys(this.state.fishes).map(key => (
-              <Fish key={key} detail={this.state.fishes[key]} />
+              <Fish key={key} addToOrder={this.addToOrder} detail={this.state.fishes[key]} />
             ))}
           </ul>
         </div>
